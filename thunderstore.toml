@@ -5,7 +5,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "zannc"
 name = "KeepsakeChambers"
-versionNumber = "1.0.0"
+versionNumber = "0.0.1"
 description = "Reducing amount of chambers needed to level up your keepsakes by a configurable amount, default 5 and 10."
 websiteUrl = "https://github.com/zanncdwbl/zannc-KeepsakeChambers"
 containsNsfwContent = false
@@ -34,10 +34,6 @@ target = "./LICENSE"
 [[build.copy]]
 source = "./src"
 target = "./plugins"
-
-[[build.copy]]
-source = "./packages"
-target = "./plugins_data"
 
 [publish]
 repository = "https://thunderstore.io"
