@@ -1,11 +1,16 @@
 ---@meta _
 ---@diagnostic disable: lowercase-global
 
-modutil.mod.Path.Wrap("SetupMap", function(base)
-    for _, traitData in pairs(game.TraitData) do
-        if traitData.ChamberThresholds then
-            traitData.ChamberThresholds = { config.ChamberThresholdLevel1, config.ChamberThresholdLevel2 }
+modutil.mod.Path.Context.Wrap("AdvanceKeepsake", function()
+    modutil.mod.Path.Wrap("IncrementTableValue", function(base, tableArg, key, amount)
+        if amount == nil then
+            amount = config.Increment
         end
-    end
-    base()
+
+        if tableArg[key] == nil then
+            tableArg[key] = 0
+        end
+
+        tableArg[key] = tableArg[key] + amount
+    end)
 end)

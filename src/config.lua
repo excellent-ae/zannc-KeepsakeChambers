@@ -1,15 +1,14 @@
 ---@meta KeepsakePort-zannc-config
 local config = {
     enabled = true,
-    ChamberThresholdLevel1 = 5,
-    ChamberThresholdLevel2 = 10
+    Increment = 5,
 }
 
 local descriptions = {
     enabled = "Set to true to enable the mod, false to disable.",
 
-    ChamberThresholdLevel1 = "Amount of Chambers to clear to increase rarity to Rare from Common",
-    ChamberThresholdLevel2 = "Amount of Chambers to clear to increase rarity to Epic from Rare"
+    Increment =
+    "Amount of 'chamber clears' to increment by on a chamber clear, eg increment of 5 will get to 25 chambers in 5 rooms.\nIncrement of 5 allows you to max a keepsake in 15 rooms",
 }
 
 return config, descriptions

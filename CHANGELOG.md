@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+Refactor code to work differently, increasing the amount the keepsake increments by to allow for a more permanent progression.
 
 ## [0.0.1] - 2024-06-10
 Added functionalitty to reduce amount of chambers needed to level up keepsake
