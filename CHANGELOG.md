@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+Added a Check so that if keepsake is already greater than level 3 then it increments as per normal
 
 ## [0.0.2] - 2024-06-12
 
