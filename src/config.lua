@@ -1,4 +1,4 @@
----@meta KeepsakePort-zannc-config
+---@meta KeepsakeChambers-zannc-config
 local config = {
     enabled = true,
     Increment = 5,

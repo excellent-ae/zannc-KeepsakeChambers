@@ -27,7 +27,7 @@ chalk = mods["SGG_Modding-Chalk"]
 ---@module 'SGG_Modding-ReLoad'
 reload = mods['SGG_Modding-ReLoad']
 
----@module 'KeepsakePort-zannc-config'
+---@module 'KeepsakeChambers-zannc-config'
 config = chalk.auto 'config.lua'
 public.config = config
 
