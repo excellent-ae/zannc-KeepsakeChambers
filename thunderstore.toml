@@ -5,14 +5,14 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "zannc"
 name = "KeepsakeChambers"
-versionNumber = "0.0.2"
+versionNumber = "0.0.3"
 description = "Reducing amount of chambers needed to level up your keepsakes by a configurable amount, done by altering the increment amount for the keepsake."
 websiteUrl = "https://github.com/zanncdwbl/zannc-KeepsakeChambers"
 containsNsfwContent = false
 
 [package.dependencies]
 SGG_Modding-ModUtil = "4.0.0"
-Hell2Modding-Hell2Modding = "1.0.39"
+Hell2Modding-Hell2Modding = "1.0.40"
 SGG_Modding-Chalk = "2.1.1"
 SGG_Modding-ReLoad = "1.0.2"
 SGG_Modding-ENVY = "1.1.0"
