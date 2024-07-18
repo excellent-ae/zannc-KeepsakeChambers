@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+Added ImGUI support<br>
+Fixed Crash that occurs if you start a new save with this and have no keepsakes equipped
 
 ## [0.0.3] - 2024-06-13
 
