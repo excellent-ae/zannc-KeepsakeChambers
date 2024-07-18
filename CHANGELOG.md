@@ -1,6 +1,9 @@
 # Changelog
 
 ## [Unreleased]
+
+## [0.0.4] - 2024-07-18
+
 Added ImGUI support<br>
 Fixed Crash that occurs if you start a new save with this and have no keepsakes equipped
 
@@ -16,7 +19,8 @@ Refactor code to work differently, increasing the amount the keepsake increments
 
 Added functionalitty to reduce amount of chambers needed to level up keepsake
 
-[unreleased]: https://github.com/zanncdwbl/zannc-KeepsakeChambers/compare/0.0.3...HEAD
+[unreleased]: https://github.com/zanncdwbl/zannc-KeepsakeChambers/compare/0.0.4...HEAD
+[0.0.4]: https://github.com/zanncdwbl/zannc-KeepsakeChambers/compare/0.0.3...0.0.4
 [0.0.3]: https://github.com/zanncdwbl/zannc-KeepsakeChambers/compare/0.0.2...0.0.3
 [0.0.2]: https://github.com/zanncdwbl/zannc-KeepsakeChambers/compare/0.0.1...0.0.2
 [0.0.1]: https://github.com/zanncdwbl/zannc-KeepsakeChambers/compare/57fffda7860651540963c3fb54ce2c28bc86b1c2...0.0.1
