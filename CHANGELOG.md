@@ -1,6 +1,9 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.0.0] - 2025-06-20
+
 Updated for Newest Patch
 No Longer increments +1 per default game
 
@@ -21,7 +24,8 @@ Refactor code to work differently, increasing the amount the keepsake increments
 
 Added functionalitty to reduce amount of chambers needed to level up keepsake
 
-[unreleased]: https://github.com/zanncdwbl/zannc-KeepsakeChambers/compare/0.0.4...HEAD
+[unreleased]: https://github.com/excellent-ae/zannc-KeepsakeChambers/compare/1.0.0...HEAD
+[1.0.0]: https://github.com/excellent-ae/zannc-KeepsakeChambers/compare/0.0.4...1.0.0
 [0.0.4]: https://github.com/zanncdwbl/zannc-KeepsakeChambers/compare/0.0.3...0.0.4
 [0.0.3]: https://github.com/zanncdwbl/zannc-KeepsakeChambers/compare/0.0.2...0.0.3
 [0.0.2]: https://github.com/zanncdwbl/zannc-KeepsakeChambers/compare/0.0.1...0.0.2
