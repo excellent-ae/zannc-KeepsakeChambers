@@ -2,23 +2,5 @@
 ---@diagnostic disable: lowercase-global
 
 modutil.mod.Path.Context.Wrap("AdvanceKeepsake", function()
-	local traitName = game.GameState.LastAwardTrait
-	local startingKeepsakeLevel = 0
-	if traitName then
-		startingKeepsakeLevel = GetKeepsakeLevel(traitName, true)
-	end
-
-	if startingKeepsakeLevel < 3 then
-		modutil.mod.Path.Wrap("IncrementTableValue", function(base, tableArg, key, amount)
-			if amount == nil then
-				amount = config.Increment
-			end
-
-			if tableArg[key] == nil then
-				tableArg[key] = 0
-			end
-
-			tableArg[key] = tableArg[key] + amount
-		end)
-	end
+	return AdvanceKeepsake_wrap()
 end)

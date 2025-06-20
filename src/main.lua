@@ -39,6 +39,7 @@ end
 
 local function on_reload()
 	import_as_fallback(rom.game)
+	import("reload.lua")
 	import("imgui.lua")
 end
 

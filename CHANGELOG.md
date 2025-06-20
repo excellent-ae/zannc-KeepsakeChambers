@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+Updated for Newest Patch
+No Longer increments +1 per default game
 
 ## [0.0.4] - 2024-07-18
 
