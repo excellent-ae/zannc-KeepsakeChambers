@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+Fixed crash if no keepsake is equipped/fresh save
 
 ## [1.0.0] - 2025-06-20
 

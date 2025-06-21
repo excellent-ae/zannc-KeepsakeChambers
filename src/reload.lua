@@ -5,7 +5,7 @@ function AdvanceKeepsake_wrap()
 		startingKeepsakeLevel = GetKeepsakeLevel(traitName, true)
 	end
 
-	if startingKeepsakeLevel < 3 then
+	if startingKeepsakeLevel and startingKeepsakeLevel < 3 then
 		modutil.mod.Path.Wrap("IncrementTableValue", function(base, tableArg, key, amount)
 			amount = config.Increment
 
