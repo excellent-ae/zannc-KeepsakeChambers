@@ -1,6 +1,9 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.0.2] - 2025-11-09
+
 - Added Enabled Flag in config
 - DEV: Context Wrap Static Stuff.
 
@@ -30,7 +33,8 @@ Refactor code to work differently, increasing the amount the keepsake increments
 
 Added functionalitty to reduce amount of chambers needed to level up keepsake
 
-[unreleased]: https://github.com/excellent-ae/zannc-KeepsakeChambers/compare/1.0.1...HEAD
+[unreleased]: https://github.com/excellent-ae/zannc-KeepsakeChambers/compare/1.0.2...HEAD
+[1.0.2]: https://github.com/excellent-ae/zannc-KeepsakeChambers/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/excellent-ae/zannc-KeepsakeChambers/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/excellent-ae/zannc-KeepsakeChambers/compare/0.0.4...1.0.0
 [0.0.4]: https://github.com/zanncdwbl/zannc-KeepsakeChambers/compare/0.0.3...0.0.4
