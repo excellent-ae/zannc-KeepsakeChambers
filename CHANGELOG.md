@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+- Added Enabled Flag in config
+- DEV: Context Wrap Static Stuff.
 
 ## [1.0.1] - 2025-06-21
 

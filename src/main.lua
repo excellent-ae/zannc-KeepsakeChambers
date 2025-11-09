@@ -7,8 +7,8 @@
 local mods = rom.mods
 
 ---@diagnostic disable: lowercase-global
----@module 'SGG_Modding-ENVY-auto'
-mods["SGG_Modding-ENVY"].auto()
+---@module 'LuaENVY-ENVY-auto'
+mods["LuaENVY-ENVY"].auto()
 
 ---@diagnostic disable-next-line: undefined-global
 rom = rom
@@ -31,20 +31,66 @@ reload = mods["SGG_Modding-ReLoad"]
 config = chalk.auto("config.lua")
 public.config = config
 
-local function on_ready()
-	import_as_fallback(rom.game)
+import_as_fallback(rom.game)
 
-	import("ready.lua")
+local function on_ready_late()
+	if config.enabled == false then
+		return
+	end
+
+	modutil.mod.Path.Context.Wrap.Static("AdvanceKeepsake", function()
+		modutil.mod.Path.Wrap("IncrementTableValue", function(base, tableArg, key, amount)
+			local startingKeepsakeLevel = nil
+
+			local traitName = game.GameState.LastAwardTrait
+			if game.GameState.LastAwardTrait ~= nil and game.HeroHasTrait(traitName) then
+				startingKeepsakeLevel = game.GetKeepsakeLevel(traitName, true)
+			end
+
+			if startingKeepsakeLevel and startingKeepsakeLevel < 3 then
+				amount = config.Increment
+				base(tableArg, key, amount)
+			else
+				base(tableArg, key, amount)
+			end
+		end)
+	end)
 end
 
-local function on_reload()
-	import_as_fallback(rom.game)
-	import("reload.lua")
-	import("imgui.lua")
+local function on_reload_late()
+	local function drawMenu()
+		local value, checked = rom.ImGui.Checkbox("Enabled", config.enabled)
+		if checked then
+			config.enabled = value
+		end
+
+		if config.enabled then
+			local value, selected = rom.ImGui.SliderInt("Chamber(s)", config.Increment, 1, 75)
+			if selected then
+				config.Increment = value
+			end
+		end
+	end
+
+	rom.gui.add_imgui(function()
+		if rom.ImGui.Begin("Keepsake Chambers") then
+			drawMenu()
+			rom.ImGui.End()
+		end
+	end)
+
+	rom.gui.add_to_menu_bar(function()
+		if rom.ImGui.BeginMenu("Configure") then
+			drawMenu()
+			rom.ImGui.EndMenu()
+		end
+	end)
 end
 
-local loader = reload.auto_single()
+local loader = reload.auto_multiple()
 
-modutil.once_loaded.game(function()
-	loader.load(on_ready, on_reload)
+mods.on_all_mods_loaded(function()
+	modutil.once_loaded.game(function()
+		loader.load("late", on_ready_late, on_reload_late)
+	end)
 end)
